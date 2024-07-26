@@ -4,7 +4,7 @@ import styles from './CustomSelect.module.css';
 interface Option {
   value: string;
   label: string;
-  icon?: string;
+  icon?: any;
 }
 
 interface CustomSelectProps {
@@ -41,14 +41,10 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
     <div className={styles.customSelect} ref={selectRef}>
       <div className={styles.selectTrigger} onClick={() => setIsOpen(!isOpen)}>
         <span>
-          {selectedOption?.icon && <img src={selectedOption.icon} alt="" className={styles.optionIcon} />}
+          {selectedOption?.icon && <div className={styles.optionIcon}>{selectedOption.icon}</div>}
           {selectedOption?.label}
         </span>
-        <img
-          src={isOpen ? '/icons/arrow-top-icon.svg' : '/icons/arrow-bottom-icon.svg'}
-          alt="Toggle Arrow"
-          className={styles.arrowIcon}
-        />
+        <div className={styles.optionIcon}>{isOpen ? arrowTop : arrowBottom}</div>
       </div>
       {isOpen && (
         <div className={styles.options}>
@@ -58,7 +54,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
               className={`${styles.option} ${option.value === value ? styles.selected : ''}`}
               onClick={() => handleOptionClick(option.value)}
             >
-              {option.icon && <img src={option.icon} alt="" className={styles.optionIcon} />}
+              {option.icon && <div className={styles.optionIcon}>{option.icon}</div>}
               {option.label}
             </div>
           ))}
@@ -69,3 +65,12 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange })
 };
 
 export default CustomSelect;
+
+const arrowTop = <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 8L8 1L15 8" stroke="black"/>
+</svg>
+
+
+const arrowBottom = <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L8 8L15 1" stroke="black"/>
+</svg>

@@ -168,9 +168,7 @@ const PurchaseForm: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={styles.buttonContainer}>
-        <button type="submit" className={styles.button}>Create task</button>
-      </div>
+      <button type="submit" className={styles.button}>Create task</button>
     </form>
   );
 };

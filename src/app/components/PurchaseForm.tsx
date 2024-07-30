@@ -8,7 +8,7 @@ const PurchaseForm: React.FC = () => {
   const [platform, setPlatform] = useState<'telegram' | 'twitter'>('telegram');
   const [service, setService] = useState<string>('followers');
   const [link, setLink] = useState<string>('');
-  const [subscribers, setSubscribers] = useState<number>(1000);
+  const [subscribers, setSubscribers] = useState<number>();
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'cash'>('card');
   const [linkError, setLinkError] = useState<boolean>(false);
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
@@ -123,6 +123,7 @@ const PurchaseForm: React.FC = () => {
           onChange={(e) => setSubscribers(Number(e.target.value))}
           min="1"
           max="1000"
+          placeholder='1000'
           className={styles.input}
         />
         <small className={styles.hint}>Limit 1-1000</small>
@@ -145,8 +146,8 @@ const PurchaseForm: React.FC = () => {
               </div>
               <div className={styles.paymentText}>Card</div>
             </div>
-            <hr className={styles.separator} />
-            <small className={styles.hint}>Visa, Mastercard</small>
+            <hr className={styles.separatorPayment} />
+            <small className={styles.hintPayment}>Visa, Mastercard</small>
           </div>
           <div
             className={`${styles.paymentMethod} ${paymentMethod === 'cash' ? styles.selected : ''}`}
@@ -162,8 +163,8 @@ const PurchaseForm: React.FC = () => {
               </div>
               <div className={styles.paymentText}>Cash</div>
             </div>
-            <hr className={styles.separator} />
-            <small className={styles.hint}>USD, EUR, RUB</small>
+            <hr className={styles.separatorPayment} />
+            <small className={styles.hintPayment}>USD, EUR, RUB</small>
           </div>
         </div>
       </div>

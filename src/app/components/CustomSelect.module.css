@@ -9,16 +9,21 @@
   align-items: center;
   width: 100%;
   height: 60px;
-  padding: 0 15px;
-  border: 1px solid #ccc;
+  padding: 0 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   cursor: pointer;
   box-sizing: border-box;
 }
 
 .selectTrigger:hover {
-  border-color: black;
+  border-width: 2px;
 }
+
+.selectTrigger:focus {
+  border-width: 2px;
+}
+
 .selectTrigger span {
   display: flex;
   align-items: center;
@@ -40,7 +45,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background: #fff;
   z-index: 1000;
@@ -59,12 +64,20 @@
   margin: 6px;
   gap: 10px;
   transition: background 0.3s;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .option img {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+}
+
+.optionIcon {
+  width: 20px;
+  height: 20px;
 }
 
 .option:hover {

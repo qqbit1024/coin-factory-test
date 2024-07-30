@@ -21,7 +21,7 @@ const Banner: React.FC = () => {
           />
         </svg>
         <h1 className={styles.bannerText}>
-          Buy Followers, Likes and<br /> Reactions on<br /> Twitter or Telegram
+          Buy Followers, Likes and<br /> Reactions on Twitter or<br />  Telegram
         </h1>
       </div>
   );

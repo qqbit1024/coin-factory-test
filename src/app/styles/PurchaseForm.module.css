@@ -43,6 +43,7 @@
   font-size: 16px;
   line-height: 24px;
   outline: none;
+  font-family: 'Mark Pro';
 }
 
 .inputWrapper {
@@ -73,21 +74,6 @@
 .input:focus {
   border-color: #000000;
   border-width: 2px;
-}
-
-
-.radioGroup {
-  display: flex;
-  gap: 1rem;
-}
-
-.radioLabel {
-  display: flex;
-  align-items: center;
-}
-
-.radioInput {
-  margin-right: 0.5rem;
 }
 
 .paymentMethods {
@@ -122,7 +108,7 @@
 }
 
 .paymentIcon {
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 
 .iconCircle {
@@ -136,7 +122,9 @@
 }
 
 .paymentText {
-  font-size: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .paymentDetails {
@@ -203,7 +191,7 @@
 
   .paymentMethods {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 10px;
     padding: 0px;
   }
 

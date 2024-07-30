@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('/coin-factory-test/fonts/Mark Pro.ttf') format('truetype'),
+    url('/coin-factory-test/fonts/MarkPro.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('/coin-factory-test/fonts/Mark Pro Medium.ttf') format('truetype'),
+    url('/coin-factory-test/fonts/MarkPro-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('/coin-factory-test/fonts/Mark Pro Bold.ttf') format('truetype'),
+    url('/coin-factory-test/fonts/Mark Pro Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}

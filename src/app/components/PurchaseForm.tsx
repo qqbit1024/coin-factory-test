@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import CustomSelect from './CustomSelect';
-import styles from './PurchaseForm.module.css';
+import styles from '../styles/PurchaseForm.module.css';
 
 const PurchaseForm: React.FC = () => {
   const [platform, setPlatform] = useState<'telegram' | 'twitter'>('telegram');
